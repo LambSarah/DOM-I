@@ -1,0 +1,14 @@
+{
+    "javascriptBooster.logLevel": "verbose",
+    "debug.javascript.autoAttachFilter": "always",
+    "debug.javascript.codelens.npmScripts": "all",
+    "npm.enableRunFromFolder": true,
+    "npm-intellisense.packageSubfoldersIntellisense": true,
+    "npm-intellisense.scanDevDependencies": true,
+    "testing.enableProblemDiagnostics": true,
+    "material-icon-theme.activeIconPack": "vue",
+    "kite.developerMode": true,
+    "kite.enableOptionalCompletionsTriggers": true,
+    "json.trace.server": "verbose",
+    
+}
