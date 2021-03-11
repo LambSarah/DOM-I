@@ -10,8 +10,7 @@
             "type": "pwa-chrome",
             "url": "http://localhost:8080/file:///home/thefemaledannyglover/Documents/LambdaProjects/Unit2/DOM-I/index.html",
             "runtimeExecutable": "stable",
-            "debugServer": 4711,
-            "linux": {}            
+            "debugServer": 4711     
         },
 
         
