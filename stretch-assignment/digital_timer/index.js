@@ -21,6 +21,7 @@ startButton.style.color = 'blue';
 startButton.style.background = 'black';
 startButton.style.color = 'white';
 startButton.style.border = "2px solid #4CAF50";
+startButton.style.margin = "5px";
 document.body.children[0].appendChild(startButton);
 
 // add event listener to startButton, timer starts when clicked
@@ -39,6 +40,7 @@ stopButton.innerHTML = "Stop Timer";
 stopButton.style.background = "green";
 stopButton.style.color = "red";
 stopButton.style.border = "2px solid #4CAF50";
+stopButton.style.margin = "5px";
 document.body.children[0].appendChild(stopButton);
 
 //add eventListener to stop timer when stopButton is clicked
@@ -49,9 +51,30 @@ stopButton.addEventListener("click", () => {
     startButton.style.transition = "all 0.3s";
     stopTimer();
 });
+
+// Add reset button to zero out timer
+let resetButton = document.createElement("button");
+resetButton.innerHTML = "Reset Timer";
+resetButton.style.background = 'yellow';
+resetButton.style.border = "2px solid #4CAF50";
+resetButton.style.margin = "5px";
+document.body.children[0].appendChild(resetButton);
+
+// add event listener to clear timer when resetButton is clicked
+resetButton.addEventListener("click", () => {
+
+    resetTimer();
+});
+
 // clears the timer back to zero
 function resetTimer() {
+    console.log("reset clicked");
     window.clearInterval(reset);
+    msTensNumber = msHundredsNumber = secTensNumber = secOnesNumber = 0;
+    document.getElementById('secondTens').innerText = secTensNumber;
+    document.getElementById('secondOnes').innerText = secOnesNumber;
+    document.getElementById('msHundreds').innerText = msHundredsNumber;
+    document.getElementById("msTens").innerText = msTensNumber;
 }
 
 function startTimer() { // Start timer
@@ -63,7 +86,6 @@ function startTimer() { // Start timer
 function stopTimer() {
     if (stopped == false) {
         stopped = true;
-
     }
 }
 
