@@ -57,7 +57,7 @@ function resetTimer() {
 function startTimer() { // Start timer
     console.log("Start Timer initiated");
     stopped = false;
-    instMs = setInterval(incrementTime(), 100);
+    instMs = setInterval(incrementTime, 100);
 }
 
 function stopTimer() {
@@ -90,10 +90,10 @@ function incrementTime() {
                 digit.innerHTML.sytle.color = 'red';
             });
         }
-        document.getElementById('secondTens').value = secTensNumber;
-        document.getElementById('secondOnes').value = secOnesNumber;
-        document.getElementById('msHundreds').value = msHundredsNumber;
-        document.getElementById("msTens").value = msTensNumber;
+        document.getElementById('secondTens').innerText = secTensNumber;
+        document.getElementById('secondOnes').innerText = secOnesNumber;
+        document.getElementById('msHundreds').innerText = msHundredsNumber;
+        document.getElementById("msTens").innerText = msTensNumber;
 
 
     }
