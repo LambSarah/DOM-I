@@ -41,6 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
+// add the nav bar
+let nav = document.querySelectorAll('a');
+nav.forEach((anchor, index) => anchor.innerText = siteContent.nav[`nav-item-${index + 1}`]);
+
 // Add 2 new nav items
 let navItem7 = document.createElement('a');
 navItem7.innerHTML = "Careers";
@@ -52,18 +57,8 @@ navItem8.innerHTML = "Roots";
 navItem8.setAttribute('href', '#');
 document.querySelector("header").children[0].prepend(navItem8);
 
-// add the nav bar
-const nav = document.querySelectorAll('a');
-
-// Add links to nav
-let navItem1 = nav[0].innerHTML = siteContent['nav']['nav-item-1'];
-let navItem2 = nav[1].innerHTML = siteContent['nav']['nav-item-2'];
-let navItem3 = nav[2].innerHTML = siteContent['nav']['nav-item-3'];
-let navItem4 = nav[3].innerHTML = siteContent['nav']['nav-item-4'];
-let navItem5 = nav[4].innerHTML = siteContent['nav']['nav-item-5'];
-let navItem6 = nav[5].innerHTML = siteContent['nav']['nav-item-6'];
-
 // Change nav text to green
+nav = document.querySelectorAll('a'); //reselect nav items after adding new ones
 nav.forEach((navChild => {
     console.log(navChild);
     navChild.style.color = "green";
